@@ -1,0 +1,2 @@
+class Daybook:
+    pass
