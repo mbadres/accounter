@@ -5,7 +5,7 @@ class AccountType(Enum):
     """Type of the account"""
 
     # Balance Sheet Accounts (Bestandskonten)
-    ASSET_ACCOUNT = "Aktickonto"
+    ASSET_ACCOUNT = "Aktivkonto"
     LIABILITY_ACCOUNT = "Passivkonto"
 
     # Profit and Loss Accounts / Income Statement Accounts (Erfolgskonten)
