@@ -1,22 +1,23 @@
 from models.account_type import AccountType
 from models.business_area import BusinessArea
 from models.cost_center import CostCenter
+from models.record import Record
 
 
 class Account:
 
     def __init__(
         self,
-        number: str,
+        number: int,
         description: str,
-        group_number: str,
+        group_number: int,
         group_description: str,
-        class_number: str,
+        class_number: int,
         class_description: str,
         type: AccountType,
-        estimated_annual_amount: float,
         cost_center: CostCenter,
         business_area: BusinessArea,
+        estimated_annual_amount: float = 0,
     ) -> None:
         self.number = number
         self.description = description
@@ -28,3 +29,4 @@ class Account:
         self.estimated_annual_amount = estimated_annual_amount
         self.cost_center = cost_center
         self.business_area = business_area
+        self.records: list[Record] = []

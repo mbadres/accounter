@@ -7,5 +7,6 @@ from tools.importing import read
 if __name__ == "__main__":
     activities_books, cash_books = read(path)
     daybook = convert(activities_books, cash_books)
+    [print(record) for record in daybook]
     analyze()
     export()
