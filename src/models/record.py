@@ -1,18 +1,21 @@
-from datetime import date
+from datetime import datetime
 
 
 class Record:
+
+    _index = 0
+
     def __init__(
         self,
-        number: int,
-        date: date,
+        date: datetime,
         description: str,
-        amount: int,
+        amount: float,
         debit_account: int,
         credit_account: int,
         reference: str = "",
     ) -> None:
-        self.number = number
+        Record._index += 1
+        self.number = Record._index
         self.date = date
         self.description = description
         self.amount = amount
@@ -21,4 +24,5 @@ class Record:
         self.reference = reference
 
     def __str__(self) -> str:
-        return f"{self.number}, {self.date}, {self.description}, {self.amount}, {self.debit_account}, {self.credit_account}, {self.reference}"
+        delimiter = "\t"
+        return f"{self.number}{delimiter}{self.date}{delimiter}{self.description}{delimiter}{self.amount}{delimiter}{self.debit_account}{delimiter}{self.credit_account}{delimiter}{self.reference}"

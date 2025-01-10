@@ -3,6 +3,7 @@ from data.settings import placeholder
 _descriptions = {
     "donation": f"Spende von {placeholder}",
     "purchase": f"Erwerb von {placeholder}",
+    "payment": f"Zahlung an {placeholder}",
     "discount": f"Abschlag für {placeholder}",
     "provision": f"Bereitstellung von {placeholder}",
     "insurance": f"Versicherung von {placeholder}",
@@ -12,10 +13,20 @@ _descriptions = {
 }
 
 templates = {
-    "general_donation": {
-        "description": f"Spende von {placeholder}",
-        "debit_account": 1000,
-        "credit_account": 3100,
+    "account_management_charge": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "broadcasting_fee": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "cash_to_bank": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
     },
     "church_construction_donation": {
         "description": f"Spende von {placeholder}",
@@ -26,5 +37,55 @@ templates = {
         "description": f"Spende von {placeholder}",
         "debit_account": 4200,
         "credit_account": 1010,
+    },
+    "general_donation": {
+        "description": f"Spende von {placeholder}",
+        "debit_account": 1000,
+        "credit_account": 3100,
+    },
+    "insurance": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "interest_income": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "internet_bill": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "pastoral_ministry": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "support_diocese": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "von_kirchbau_nach_laufend": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "von_laufen_nach_spar": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "water_consumption": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
+    },
+    "x": {
+        "description": f"FEHLER",
+        "debit_account": 0,
+        "credit_account": 0,
     },
 }

@@ -1,6 +1,6 @@
 path = r""
 
-activities_books_directory = "Umsätze"
+activities_books_directory = "Kontoauszüge"
 
 cash_book_directory = "Kassenbuch"
 
