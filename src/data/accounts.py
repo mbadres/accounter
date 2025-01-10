@@ -4,329 +4,329 @@ from models.business_area import BusinessArea
 from models.cost_center import CostCenter
 
 accounts = {
-    "0200": Account(
+    200: Account(
         number=200,
         description="Unbebaute Grundstücke",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0210": Account(
+    210: Account(
         number=210,
         description="Bebaute Grundstücke",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0250": Account(
+    250: Account(
         number=250,
         description="Kirchengebäude",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0255": Account(
+    255: Account(
         number=255,
         description="Sonstige Gebäude",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0400": Account(
+    400: Account(
         number=400,
         description="Liturgische Ausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0410": Account(
+    410: Account(
         number=410,
         description="Büroausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "0420": Account(
+    420: Account(
         number=420,
         description="IT-Ausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "1000": Account(
+    1000: Account(
         number=1000,
         description="Konto für Laufendes",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "1010": Account(
+    1010: Account(
         number=1010,
         description="Kirchbaukonto",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "1020": Account(
+    1020: Account(
         number=1020,
         description="Sparkonto",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "1100": Account(
+    1100: Account(
         number=1100,
         description="Kasse",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "2200": Account(
+    2200: Account(
         number=2200,
         description="Freie Rücklagen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "2210": Account(
+    2210: Account(
         number=2210,
         description="Betriebsmittelrücklage",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "2220": Account(
+    2220: Account(
         number=2220,
         description="Rücklagen für Bau und Instandhaltung",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "2300": Account(
+    2300: Account(
         number=2300,
         description="Steuerrückstellungen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "2310": Account(
+    2310: Account(
         number=2310,
         description="Sonstige Rückstellungen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "3100": Account(
+    3100: Account(
         number=3100,
         description="Allgemeine Spenden",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "3110": Account(
+    3110: Account(
         number=3110,
         description="Zweckgebundene Spenden",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "3200": Account(
+    3200: Account(
         number=3200,
         description="Kollekte",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "3300": Account(
+    3300: Account(
         number=3300,
         description="Öffentliche Zuschüsse",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "3310": Account(
+    3310: Account(
         number=3310,
         description="Kirchliche Zuschüsse",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4100": Account(
+    4100: Account(
         number=4100,
         description="Pfarrdienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4110": Account(
+    4110: Account(
         number=4110,
         description="Materialien (z.B. Kerzen Wein Bücher)",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4200": Account(
+    4200: Account(
         number=4200,
         description="Materialien für die Sonntagschule oder ähnliches",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4210": Account(
+    4210: Account(
         number=4210,
         description="Bezuschussung von Treffen Ausflügen und anderen Unternehmungen",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4220": Account(
+    4220: Account(
         number=4220,
         description="Gemeinschaftsessen",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4230": Account(
+    4230: Account(
         number=4230,
         description="Fahrtkostenerstattung für Seelsorge",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4300": Account(
+    4300: Account(
         number=4300,
         description="Bistumsumlage (Beiträge an das Bistum)",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4310": Account(
+    4310: Account(
         number=4310,
         description="Ökumene",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4400": Account(
+    4400: Account(
         number=4400,
         description="Heizung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4410": Account(
+    4410: Account(
         number=4410,
         description="Strom",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4420": Account(
+    4420: Account(
         number=4420,
         description="Wasser",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4430": Account(
+    4430: Account(
         number=4430,
         description="Reinigung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4440": Account(
+    4440: Account(
         number=4440,
         description="Instandhaltung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4450": Account(
+    4450: Account(
         number=4450,
         description="Bau",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4500": Account(
+    4500: Account(
         number=4500,
         description="Gebäudeversicherung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4510": Account(
+    4510: Account(
         number=4510,
         description="Haftpflichtversicherung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4600": Account(
+    4600: Account(
         number=4600,
         description="Büromaterial",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4610": Account(
+    4610: Account(
         number=4610,
         description="Porto",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4620": Account(
+    4620: Account(
         number=4620,
         description="Telefon & Internet",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "4630": Account(
+    4630: Account(
         number=4630,
         description="Druckkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
     ),
-    "5100": Account(
+    5100: Account(
         number=5100,
         description="Zinserträge",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "5500": Account(
+    5500: Account(
         number=5500,
         description="Bankgebühren",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
     ),
-    "6100": Account(
+    6100: Account(
         number=6100,
         description="Einnahmen Zweckbetrieb",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.PURPOSE_RELATED_BUSINESS,
     ),
-    "6500": Account(
+    6500: Account(
         number=6500,
         description="Ausgaben Zweckbetrieb",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.PURPOSE_RELATED_BUSINESS,
     ),
-    "7100": Account(
+    7100: Account(
         number=7100,
         description="Einnahmen Wirtschaftlicher Geschäftsbetrieb",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.COMMERCIAL_OPERATIONS,
     ),
-    "7500": Account(
+    7500: Account(
         number=7500,
         description="Ausgaben Wirtschaftlicher Geschäftsbetrieb",
         type=AccountType.EXPENSE_ACCOUNT,
