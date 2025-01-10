@@ -7,8 +7,6 @@ accounts = {
     "0200": Account(
         number=200,
         description="Unbebaute Grundstücke",
-        group_number=20,
-        group_description="Grundstücke",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -16,8 +14,6 @@ accounts = {
     "0210": Account(
         number=210,
         description="Bebaute Grundstücke",
-        group_number=20,
-        group_description="Grundstücke",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -25,8 +21,6 @@ accounts = {
     "0250": Account(
         number=250,
         description="Kirchengebäude",
-        group_number=25,
-        group_description="Gebäude",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -34,8 +28,6 @@ accounts = {
     "0255": Account(
         number=255,
         description="Sonstige Gebäude",
-        group_number=25,
-        group_description="Gebäude",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -43,8 +35,6 @@ accounts = {
     "0400": Account(
         number=400,
         description="Liturgische Ausstattung",
-        group_number=40,
-        group_description="Betriebsausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -52,8 +42,6 @@ accounts = {
     "0410": Account(
         number=410,
         description="Büroausstattung",
-        group_number=40,
-        group_description="Betriebsausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -61,8 +49,6 @@ accounts = {
     "0420": Account(
         number=420,
         description="IT-Ausstattung",
-        group_number=40,
-        group_description="Betriebsausstattung",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -70,8 +56,6 @@ accounts = {
     "1000": Account(
         number=1000,
         description="Konto für Laufendes",
-        group_number=100,
-        group_description="Bankkonten",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -79,8 +63,6 @@ accounts = {
     "1010": Account(
         number=1010,
         description="Kirchbaukonto",
-        group_number=110,
-        group_description="Bankkonten",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -88,8 +70,6 @@ accounts = {
     "1020": Account(
         number=1020,
         description="Sparkonto",
-        group_number=110,
-        group_description="Bankkonten",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -97,8 +77,6 @@ accounts = {
     "1100": Account(
         number=1100,
         description="Kasse",
-        group_number=100,
-        group_description="Kassen",
         type=AccountType.ASSET_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -106,8 +84,6 @@ accounts = {
     "2200": Account(
         number=2200,
         description="Freie Rücklagen",
-        group_number=220,
-        group_description="Rücklagen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -115,8 +91,6 @@ accounts = {
     "2210": Account(
         number=2210,
         description="Betriebsmittelrücklage",
-        group_number=220,
-        group_description="Rücklagen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -124,8 +98,6 @@ accounts = {
     "2220": Account(
         number=2220,
         description="Rücklagen für Bau und Instandhaltung",
-        group_number=220,
-        group_description="Rücklagen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -133,8 +105,6 @@ accounts = {
     "2300": Account(
         number=2300,
         description="Steuerrückstellungen",
-        group_number=230,
-        group_description="Rückstellungen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -142,8 +112,6 @@ accounts = {
     "2310": Account(
         number=2310,
         description="Sonstige Rückstellungen",
-        group_number=230,
-        group_description="Rückstellungen",
         type=AccountType.LIABILITY_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -151,8 +119,6 @@ accounts = {
     "3100": Account(
         number=3100,
         description="Allgemeine Spenden",
-        group_number=310,
-        group_description="Spenden",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -160,8 +126,6 @@ accounts = {
     "3110": Account(
         number=3110,
         description="Zweckgebundene Spenden",
-        group_number=310,
-        group_description="Spenden",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -169,8 +133,6 @@ accounts = {
     "3200": Account(
         number=3200,
         description="Kollekte",
-        group_number=320,
-        group_description="Kollekten",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -178,8 +140,6 @@ accounts = {
     "3300": Account(
         number=3300,
         description="Öffentliche Zuschüsse",
-        group_number=330,
-        group_description="Zuschüsse",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -187,8 +147,6 @@ accounts = {
     "3310": Account(
         number=3310,
         description="Kirchliche Zuschüsse",
-        group_number=330,
-        group_description="Zuschüsse",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -196,8 +154,6 @@ accounts = {
     "4100": Account(
         number=4100,
         description="Pfarrdienst",
-        group_number=410,
-        group_description="Gottesdienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -205,8 +161,6 @@ accounts = {
     "4110": Account(
         number=4110,
         description="Materialien (z.B. Kerzen Wein Bücher)",
-        group_number=410,
-        group_description="Gottesdienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -214,8 +168,6 @@ accounts = {
     "4200": Account(
         number=4200,
         description="Materialien für die Sonntagschule oder ähnliches",
-        group_number=420,
-        group_description="Gemeindedienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -223,8 +175,6 @@ accounts = {
     "4210": Account(
         number=4210,
         description="Bezuschussung von Treffen Ausflügen und anderen Unternehmungen",
-        group_number=420,
-        group_description="Gemeindedienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -232,8 +182,6 @@ accounts = {
     "4220": Account(
         number=4220,
         description="Gemeinschaftsessen",
-        group_number=420,
-        group_description="Gemeindedienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -241,8 +189,6 @@ accounts = {
     "4230": Account(
         number=4230,
         description="Fahrtkostenerstattung für Seelsorge",
-        group_number=420,
-        group_description="Gemeindedienst",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -250,8 +196,6 @@ accounts = {
     "4300": Account(
         number=4300,
         description="Bistumsumlage (Beiträge an das Bistum)",
-        group_number=430,
-        group_description="Abgaben",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -259,8 +203,6 @@ accounts = {
     "4310": Account(
         number=4310,
         description="Ökumene",
-        group_number=430,
-        group_description="Abgaben",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -268,8 +210,6 @@ accounts = {
     "4400": Account(
         number=4400,
         description="Heizung",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -277,8 +217,6 @@ accounts = {
     "4410": Account(
         number=4410,
         description="Strom",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -286,8 +224,6 @@ accounts = {
     "4420": Account(
         number=4420,
         description="Wasser",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -295,8 +231,6 @@ accounts = {
     "4430": Account(
         number=4430,
         description="Reinigung",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -304,8 +238,6 @@ accounts = {
     "4440": Account(
         number=4440,
         description="Instandhaltung",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -313,8 +245,6 @@ accounts = {
     "4450": Account(
         number=4450,
         description="Bau",
-        group_number=440,
-        group_description="Raumkosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -322,8 +252,6 @@ accounts = {
     "4500": Account(
         number=4500,
         description="Gebäudeversicherung",
-        group_number=450,
-        group_description="Versicherungen",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -331,8 +259,6 @@ accounts = {
     "4510": Account(
         number=4510,
         description="Haftpflichtversicherung",
-        group_number=450,
-        group_description="Versicherungen",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -340,8 +266,6 @@ accounts = {
     "4600": Account(
         number=4600,
         description="Büromaterial",
-        group_number=460,
-        group_description="Verwaltung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -349,8 +273,6 @@ accounts = {
     "4610": Account(
         number=4610,
         description="Porto",
-        group_number=460,
-        group_description="Verwaltung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -358,8 +280,6 @@ accounts = {
     "4620": Account(
         number=4620,
         description="Telefon & Internet",
-        group_number=460,
-        group_description="Verwaltung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -367,8 +287,6 @@ accounts = {
     "4630": Account(
         number=4630,
         description="Druckkosten",
-        group_number=460,
-        group_description="Verwaltung",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.CHARITABLE_ACTIVITIES,
@@ -376,8 +294,6 @@ accounts = {
     "5100": Account(
         number=5100,
         description="Zinserträge",
-        group_number=510,
-        group_description="Kapitalerträge",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -385,8 +301,6 @@ accounts = {
     "5500": Account(
         number=5500,
         description="Bankgebühren",
-        group_number=550,
-        group_description="Vermögensverwaltungskosten",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.ASSET_MANAGEMENT,
@@ -394,8 +308,6 @@ accounts = {
     "6100": Account(
         number=6100,
         description="Einnahmen Zweckbetrieb",
-        group_number=610,
-        group_description="Einnahmen",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.PURPOSE_RELATED_BUSINESS,
@@ -403,8 +315,6 @@ accounts = {
     "6500": Account(
         number=6500,
         description="Ausgaben Zweckbetrieb",
-        group_number=650,
-        group_description="Ausgaben",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.PURPOSE_RELATED_BUSINESS,
@@ -412,8 +322,6 @@ accounts = {
     "7100": Account(
         number=7100,
         description="Einnahmen Wirtschaftlicher Geschäftsbetrieb",
-        group_number=710,
-        group_description="Einnahmen",
         type=AccountType.REVENUE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.COMMERCIAL_OPERATIONS,
@@ -421,8 +329,6 @@ accounts = {
     "7500": Account(
         number=7500,
         description="Ausgaben Wirtschaftlicher Geschäftsbetrieb",
-        group_number=750,
-        group_description="Ausgaben",
         type=AccountType.EXPENSE_ACCOUNT,
         cost_center=CostCenter.SERVICE_COST_CENTER,
         business_area=BusinessArea.COMMERCIAL_OPERATIONS,

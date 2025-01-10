@@ -1,4 +1,5 @@
 from data.account_classes import account_classes
+from data.account_groups import account_groups
 from models.account_type import AccountType
 from models.business_area import BusinessArea
 from models.cost_center import CostCenter
@@ -11,8 +12,6 @@ class Account:
         self,
         number: int,
         description: str,
-        group_number: int,
-        group_description: str,
         type: AccountType,
         cost_center: CostCenter,
         business_area: BusinessArea,
@@ -20,7 +19,6 @@ class Account:
     ) -> None:
         self.number = number
         self.description = description
-        self.group_description = group_description
         self.type = type
         self.estimated_annual_amount = estimated_annual_amount
         self.cost_center = cost_center
@@ -39,9 +37,6 @@ class Account:
     def group_number(self):
         return self.number // 100 * 10
 
-
-"""
     @property
     def group_description(self):
-        return group_descriptions[self.class_number]
-"""
+        return account_groups[self.group_number]
