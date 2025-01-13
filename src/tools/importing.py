@@ -2,7 +2,7 @@ from pathlib import Path
 
 from pandas import DataFrame, read_csv
 
-from data.settings import activities_books_directory, delimiter
+from data.settings import activities_books_directory, delimiter, date_tag
 
 
 def _check(path: Path) -> None:
@@ -26,7 +26,9 @@ def _import(path) -> list[DataFrame]:
     dataframes: list[DataFrame] = []
 
     for file in path.glob("*.csv"):
-        dataframes.append(read_csv(file, delimiter=delimiter))
+        dataframes.append(
+            read_csv(file, parse_dates=[date_tag], dayfirst=True, delimiter=delimiter)
+        )
 
     return dataframes
 

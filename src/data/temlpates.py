@@ -59,13 +59,13 @@ templates = {
         "credit_account": 1100,
     },
     "pastoral_ministry": {
-        "description": f"FEHLER",
-        "debit_account": 0,
+        "description": f"Zahlung für den Pfarrdienst",
+        "debit_account": 4100,
         "credit_account": 1100,
     },
     "support_diocese": {
-        "description": f"FEHLER",
-        "debit_account": 0,
+        "description": f"Unterstützung für das Bistum",
+        "debit_account": 4300,
         "credit_account": 1100,
     },
     "von_kirchbau_nach_laufend": {

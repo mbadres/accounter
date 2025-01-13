@@ -43,14 +43,14 @@ def _begin(activities_books: list[DataFrame]) -> list[Record]:
         else:
             debit_account = 1100
 
-        year = datetime.strptime(book.iloc[-1]["Buchungstag"], "%d.%m.%Y").year
+        year = book.iloc[-1]["Buchungstag"].year
         result = float(book.iloc[-1]["Saldo nach Buchung"].replace(",", "."))
         amount = float(book.iloc[-1]["Betrag"].replace(",", "."))
         beginning = result - amount
 
         yield Record(
             date=datetime(year, 1, 1),
-            description="Eröffnungsbuchung",
+            description="Eröffnung des Kontos",
             amount=beginning,
             debit_account=debit_account,
             credit_account=9000,
@@ -84,7 +84,7 @@ def _map(row: Series) -> Record:
             and row["Name Zahlungsbeteiligter"] == mapping["Name Zahlungsbeteiligter"]
         )
         condition = condition and row["Buchungstext"] == mapping["Buchungstext"]
-        condition = condition and row["Verwendungszweck"] == mapping["Verwendungszweck"]
+        condition = condition and mapping["Verwendungszweck"] in row["Verwendungszweck"]
 
         if condition:
             template = mapping["Buchungsvorlage"]
@@ -92,7 +92,7 @@ def _map(row: Series) -> Record:
 
     return _create_record(
         template=template,
-        date=datetime.strptime(row["Buchungstag"], "%d.%m.%Y"),
+        date=row[date_tag],
         amount=row["Betrag"],
         name=row["Name Zahlungsbeteiligter"],
     )
