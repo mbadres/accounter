@@ -11,3 +11,5 @@ delimiter = ";"
 date_tag = "Buchungstag"
 
 placeholder = "````"
+
+no_template = "####"

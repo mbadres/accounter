@@ -1,4 +1,4 @@
-from data.settings import placeholder
+from data.settings import placeholder, no_template
 
 _descriptions = {
     "donation": f"Spende von {placeholder}",
@@ -36,7 +36,7 @@ templates = {
     "congregation_materials": {
         "description": f"Spende von {placeholder}",
         "debit_account": 4200,
-        "credit_account": 1110,
+        "credit_account": 1100,
     },
     "general_donation": {
         "description": f"Spende von {placeholder}",
@@ -83,7 +83,7 @@ templates = {
         "debit_account": 0,
         "credit_account": 1100,
     },
-    "x": {
+    no_template: {
         "description": f"FEHLER",
         "debit_account": 0,
         "credit_account": 0,

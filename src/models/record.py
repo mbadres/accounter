@@ -25,4 +25,4 @@ class Record:
 
     def __str__(self) -> str:
         delimiter = "\t"
-        return f"{self.number}{delimiter}{self.date}{delimiter}{self.description}{delimiter}{self.amount}{delimiter}{self.debit_account}{delimiter}{self.credit_account}{delimiter}{self.reference}"
+        return f"{self.number}{delimiter}{self.date.strftime("%d.%m.%Y")}{delimiter}{self.description}{delimiter}{self.amount}{delimiter}{self.debit_account}{delimiter}{self.credit_account}{delimiter}{self.reference}"
