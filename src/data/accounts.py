@@ -124,7 +124,7 @@ accounts = {
     ),
     3530: Account(
         number=5330,
-        description="Bezuschussung von Treffen Ausflügen und anderen Unternehmungen",
+        description="Bezuschussung von Treffen, Ausflügen und anderen Unternehmungen",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
     3540: Account(

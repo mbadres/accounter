@@ -32,3 +32,32 @@ class Account:
     @property
     def group_description(self):
         return account_groups[self.group_number]
+
+    @property
+    def beginning_inventory(self):
+        for record in self.records:
+            if record.credit_account >= 9000:
+                return record.amount
+
+        return 0
+
+    @property
+    def debit_credit_sums(self):
+        debit_sum = 0
+        credit_sum = 0
+        for record in self.records:
+            if self.number == record.debit_account:
+                debit_sum += record.amount
+            else:
+                credit_sum += record.amount
+
+        return debit_sum, credit_sum
+
+    @property
+    def balance(self):
+        debit_sum, credit_sum = self.debit_credit_sums
+
+        if self.type.is_debit_increase():
+            return debit_sum - credit_sum
+        else:
+            return credit_sum - debit_sum
