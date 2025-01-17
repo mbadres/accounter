@@ -21,3 +21,16 @@ class AccountType(Enum):
 
     # Suspense Accounts (Zwischenkonten)
     TRANSIT_ACCOUNT = "Zwischenkonto"
+
+    def is_debit_increase(self) -> bool:
+        """
+        This method indicates how the account type is effecting the balance growth.
+        :return: True if account balance shall be raise if debit is increased.
+        """
+        return self in [
+            AccountType.ASSET_ACCOUNT,
+            AccountType.EXPENSE_ACCOUNT,
+            AccountType.PREPAID_EXPENSES,
+            AccountType.PROPRIETOR_S_ACCOUNT,
+            AccountType.TRANSIT_ACCOUNT,
+        ]
