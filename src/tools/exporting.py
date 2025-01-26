@@ -1,2 +1,2 @@
-def export():
+def export(reports):
     pass
