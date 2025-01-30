@@ -19,17 +19,6 @@ def _create_record(template: str, date: datetime, amount: int, name: str) -> Rec
     )
 
 
-def _begin(data: list[DataFrame]) -> list[Record]:
-    data.groupby("IBAN Auftragskonto").agg(
-        {
-            "Buchungstag": "min",
-            "Betrag": "sum",
-            "Saldo nach Buchung": "mean",
-        }
-    )
-    return []
-
-
 def _begin(activities_books: list[DataFrame]) -> list[Record]:
     """Determine the opening balance of each activities_books."""
 

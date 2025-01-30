@@ -1,0 +1,77 @@
+{
+  "account_management_charge": {
+    "description": "Gebühr für die Kontoführung",
+    "debit_account": 5500,
+    "credit_account": 1100
+  },
+  "broadcasting_fee": {
+    "description": "Rundfunkbeitrag",
+    "debit_account": 0,
+    "credit_account": 1100
+  },
+  "cash_to_bank": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 0
+  },
+  "church_construction_donation": {
+    "description": "Spende von ````",
+    "debit_account": 1110,
+    "credit_account": 3100
+  },
+  "congregation_materials": {
+    "description": "Spende von ````",
+    "debit_account": 4200,
+    "credit_account": 1100
+  },
+  "general_donation": {
+    "description": "Spende von ````",
+    "debit_account": 1100,
+    "credit_account": 3100
+  },
+  "insurance": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 1100
+  },
+  "interest_income": {
+    "description": "FEHLER",
+    "debit_account": 1120,
+    "credit_account": 5100
+  },
+  "internet_bill": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 1100
+  },
+  "pastoral_ministry": {
+    "description": "Zahlung für den Pfarrdienst",
+    "debit_account": 4100,
+    "credit_account": 1100
+  },
+  "support_diocese": {
+    "description": "Unterstützung für das Bistum",
+    "debit_account": 4300,
+    "credit_account": 1100
+  },
+  "von_kirchbau_nach_laufend": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 0
+  },
+  "von_laufen_nach_spar": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 0
+  },
+  "water_consumption": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 1100
+  },
+  "####": {
+    "description": "FEHLER",
+    "debit_account": 0,
+    "credit_account": 0
+  }
+}

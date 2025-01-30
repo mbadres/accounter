@@ -1,0 +1,10 @@
+addresses = {
+    "Spende von X": {
+        "name": "X",
+        "street": "",
+        "number": "",
+        "postal code": "",
+        "city": "",
+        "country": "",
+    },
+}

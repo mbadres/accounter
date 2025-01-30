@@ -15,7 +15,7 @@ class Account:
         self.number = number
         self.description = description
         self.type = type
-        self.records: list[Record] = []
+        self.records: [Record] = []
 
     @property
     def class_number(self):
