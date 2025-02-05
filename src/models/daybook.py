@@ -8,6 +8,3 @@ class Daybook:
 
     def add(self, record: Record):
         self.records.append(record)
-
-
-daybook = Daybook()

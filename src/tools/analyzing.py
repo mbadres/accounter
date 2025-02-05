@@ -1,19 +1,22 @@
 from data.accounts import accounts
 from models.account_type import AccountType
-from models.daybook import daybook
+from models.daybook import Daybook
+from models.donor import Donor
 from models.record import Record
 
 
 def analyze(records: [Record]):
+    daybook = Daybook()
+    donors: [str, Donor] = {}
 
     for record in records:
         print(record)
 
-        debit_account = accounts[record.debit_account]
-        credit_account = accounts[record.credit_account]
-
         # Add the record to the daybook.
         daybook.add(record)
+
+        debit_account = accounts[record.debit_account]
+        credit_account = accounts[record.credit_account]
 
         # Add record to its belonging accounts.
         debit_account.records.append(record)
@@ -30,6 +33,7 @@ def analyze(records: [Record]):
 
             # Add record to its belonging donors.
             ...
+            # donors[record.description].records.append(record)
 
     # Create a budget plan.
-    return ""
+    return daybook, accounts, donors

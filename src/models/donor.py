@@ -1,4 +1,4 @@
-from configurations.accounts import accounts
+from data.accounts import accounts
 from models.account_type import AccountType
 from models.record import Record
 

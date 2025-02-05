@@ -2,6 +2,11 @@ from models.account import Account
 from models.account_type import AccountType
 
 accounts = {
+    0: Account(
+        number=0,
+        description="FEHLER",
+        type=AccountType.ASSET_ACCOUNT,
+    ),
     200: Account(
         number=200,
         description="Unbebaute Grundstücke",
@@ -107,121 +112,122 @@ accounts = {
         description="Kirchliche Zuschüsse",
         type=AccountType.REVENUE_ACCOUNT,
     ),
-    3500: Account(
-        number=3500,
+    3501: Account(
+        number=3501,
         description="Pfarrdienst",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3502: Account(
+        number=3502,
+        description="Materialien für den Gottesdienst",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3503: Account(
+        number=3503,
+        description="Materialien für die Sonntagschule oder ähnliches",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3504: Account(
+        number=3504,
+        description="Bezuschussung von Treffen, Ausflügen und anderen Unternehmungen",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3505: Account(
+        number=3505,
+        description="Gemeinschaftsessen",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3506: Account(
+        number=3506,
+        description="Fahrtkostenerstattung für Seelsorge",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3507: Account(
+        number=3507,
+        description="Unterstützung für das Bistum",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3508: Account(
+        number=3508,
+        description="Ökumene",
+        type=AccountType.EXPENSE_ACCOUNT,
+    ),
+    3509: Account(
+        number=3509,
+        description="Heizung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
     3510: Account(
         number=3510,
-        description="Materialien für den Gottesdienst",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3520: Account(
-        number=5320,
-        description="Materialien für die Sonntagschule oder ähnliches",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3530: Account(
-        number=5330,
-        description="Bezuschussung von Treffen, Ausflügen und anderen Unternehmungen",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3540: Account(
-        number=5340,
-        description="Gemeinschaftsessen",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3550: Account(
-        number=5350,
-        description="Fahrtkostenerstattung für Seelsorge",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3600: Account(
-        number=3600,
-        description="Unterstützung für das Bistum",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3700: Account(
-        number=3700,
-        description="Ökumene",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3800: Account(
-        number=3800,
-        description="Heizung",
-        type=AccountType.EXPENSE_ACCOUNT,
-    ),
-    3810: Account(
-        number=3810,
         description="Strom",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3820: Account(
-        number=3820,
+    3511: Account(
+        number=3511,
         description="Wasser",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3830: Account(
-        number=3830,
+    3512: Account(
+        number=3512,
         description="Reinigung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3840: Account(
-        number=3840,
+    3513: Account(
+        number=3513,
         description="Straßenreinigung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3850: Account(
-        number=3850,
+    3514: Account(
+        number=3514,
         description="Garten- und Winterdienst",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3860: Account(
-        number=3860,
+    3515: Account(
+        number=3515,
         description="Rundfunk",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3870: Account(
-        number=3870,
+    3516: Account(
+        number=3516,
         description="Instandhaltung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3880: Account(
-        number=3880,
+    3517: Account(
+        number=3517,
         description="Bau",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3890: Account(
-        number=3890,
+    3518: Account(
+        number=3518,
         description="Gebäudeversicherung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3900: Account(
-        number=3900,
+    3519: Account(
+        number=3519,
         description="Büromaterial",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3910: Account(
-        number=3910,
+    3520: Account(
+        number=3520,
         description="Versand",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3920: Account(
-        number=3920,
+    3521: Account(
+        number=3522,
         description="Telefon & Internet",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3930: Account(
-        number=3930,
+    3523: Account(
+        number=3523,
         description="Druck",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
-    3940: Account(
-        number=3940,
+    3524: Account(
+        number=3524,
         description="Haftpflichtversicherung",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
+    # Hier fehlt die Öffentlichkeitsarbeit: Website, Plakate
     4100: Account(
         number=4100,
         description="Zinserträge",
@@ -234,22 +240,22 @@ accounts = {
     ),
     5100: Account(
         number=5100,
-        description="Einnahmen Zweckbetrieb",
+        description="Einnahmen im Zweckbetrieb",
         type=AccountType.REVENUE_ACCOUNT,
     ),
     5500: Account(
         number=5500,
-        description="Ausgaben Zweckbetrieb",
+        description="Ausgaben im Zweckbetrieb",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
     6100: Account(
         number=6100,
-        description="Einnahmen Wirtschaftlicher Geschäftsbetrieb",
+        description="Einnahmen im wirtschaftlicher Geschäftsbetrieb",
         type=AccountType.REVENUE_ACCOUNT,
     ),
     6500: Account(
         number=6500,
-        description="Ausgaben Wirtschaftlicher Geschäftsbetrieb",
+        description="Ausgaben im wirtschaftlicher Geschäftsbetrieb",
         type=AccountType.EXPENSE_ACCOUNT,
     ),
     9000: Account(
