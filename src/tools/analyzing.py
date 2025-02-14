@@ -3,6 +3,7 @@ from models.account_type import AccountType
 from models.daybook import Daybook
 from models.donor import Donor
 from models.record import Record
+from models.report import Report
 
 
 def analyze(records: [Record]):
@@ -10,7 +11,6 @@ def analyze(records: [Record]):
     donors: [str, Donor] = {}
 
     for record in records:
-        print(record)
 
         # Add the record to the daybook.
         daybook.add(record)
@@ -32,8 +32,18 @@ def analyze(records: [Record]):
         ):
 
             # Add record to its belonging donors.
-            ...
-            # donors[record.description].records.append(record)
+            if record.description not in donors:
+                donors[record.description] = Donor(
+                    first_name="",
+                    last_name="",
+                    address_addition="",
+                    street="",
+                    number="",
+                    postal_code="",
+                    city="",
+                    country="",
+                )
+            donors[record.description].records.append(record)
 
     # Create a budget plan.
-    return daybook, accounts, donors
+    return Report(accounts, daybook, donors)

@@ -27,12 +27,15 @@ class Donor:
         self.records: [Record] = []
 
     @property
-    def donations_sum(self):
-        sum = 0
+    def donations_sum(self) -> float:
+        sum = 0.0
         for record in self.records:
             if accounts[record.credit_account].type == AccountType.REVENUE_ACCOUNT:
-                sum += record.amount
+                sum += float(record.amount)
             elif accounts[record.debit_account].type == AccountType.REVENUE_ACCOUNT:
                 sum -= record.amount
 
         return sum
+
+    def __str__(self) -> str:
+        return f"Spenden von {self.first_name} {self.last_name} sind { self.donations_sum }."
