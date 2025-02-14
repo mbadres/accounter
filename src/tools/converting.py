@@ -4,16 +4,17 @@ from pandas import concat, DataFrame, Series
 
 from data.mappings import mappings
 from data.settings import date_tag, placeholder, no_template
-from data.temlpates import templates
+from data.templates import templates
 from models.record import Record
 
 
-def _create_record(template: str, date: datetime, amount: int, name: str) -> Record:
+def _create_record(template: str, date: datetime, amount: str, name: str) -> Record:
     map = templates[template]
+
     return Record(
         date=date,
         description=map["description"].replace(placeholder, str(name)),
-        amount=amount,
+        amount=float(amount.replace(",", ".")),
         debit_account=map["debit_account"],
         credit_account=map["credit_account"],
     )
@@ -21,6 +22,8 @@ def _create_record(template: str, date: datetime, amount: int, name: str) -> Rec
 
 def _begin(activities_books: list[DataFrame]) -> list[Record]:
     """Determine the opening balance of each activities_books."""
+
+    records: [Record] = []
 
     for book in activities_books:
 
@@ -37,13 +40,17 @@ def _begin(activities_books: list[DataFrame]) -> list[Record]:
         amount = float(book.iloc[-1]["Betrag"].replace(",", "."))
         beginning = result - amount
 
-        yield Record(
-            date=datetime(year, 1, 1),
-            description="Eröffnung des Kontos",
-            amount=beginning,
-            debit_account=debit_account,
-            credit_account=9000,
+        records.append(
+            Record(
+                date=datetime(year, 1, 1),
+                description="Eröffnung des Kontos",
+                amount=beginning,
+                debit_account=debit_account,
+                credit_account=9000,
+            )
         )
+
+    return records
 
 
 def _shrink(data: DataFrame) -> DataFrame:

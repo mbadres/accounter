@@ -3,6 +3,8 @@ import os
 from docx import Document
 from win32com import client
 
+from models.record import Record
+
 
 def _create_document():
     doc = Document()
@@ -31,5 +33,14 @@ def _print():
     word.Quit()
 
 
-def export(reports):
+def export(report):
+    def print_records(records: [Record]):
+        for record in records:
+            print(record)
+
+    # print_records(report.daybook.records)
+    for donor in report.donors:
+        # print_records(report.donors[donor].records)
+        print(report.donors[donor])
+
     _create_document()
