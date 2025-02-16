@@ -24,6 +24,13 @@ def _create_document():
     doc.save("dokument.docx")
 
 
+def _add_records_table(doc: Document, records: [Record]):
+
+    table = doc.add_table(rows=len(records), cols=5)
+    cell = table.cell(0, 0)
+    cell.text = "Zelle 1"
+
+
 def _print():
     doc_path = os.path.join(os.getcwd(), "dokument.docx")
     word = client.Dispatch("Word.Application")
@@ -33,14 +40,19 @@ def _print():
     word.Quit()
 
 
+def _create_daybook_report(daybook):
+    pass
+
+
+def _create_donors_report(donors):
+    pass
+
+
+def _create_accounts_report(accounts):
+    pass
+
+
 def export(report):
-    def print_records(records: [Record]):
-        for record in records:
-            print(record)
-
-    # print_records(report.daybook.records)
-    for donor in report.donors:
-        # print_records(report.donors[donor].records)
-        print(report.donors[donor])
-
-    _create_document()
+    _create_accounts_report(report.accounts)
+    _create_daybook_report(report.daybook)
+    _create_donors_report(report.donors)
