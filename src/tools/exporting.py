@@ -6,42 +6,50 @@ from win32com import client
 from models.record import Record
 
 
-def _create_document():
-    doc = Document()
+def _add_heading(doc: Document, text: str):
+    doc.add_heading(text)
 
-    doc.add_paragraph("Einfacher Text")
-    doc.add_heading("Überschrift", level=1)
 
+def _add_paragraph(doc: Document, text: str):
     paragraph = doc.add_paragraph()
-    run = paragraph.add_run("Formatierter Text")
-    run.bold = True
-    run.italic = True
-
-    table = doc.add_table(rows=2, cols=2)
-    cell = table.cell(0, 0)
-    cell.text = "Zelle 1"
-
-    doc.save("dokument.docx")
+    paragraph.add_run(text)
 
 
 def _add_records_table(doc: Document, records: [Record]):
+    table = doc.add_table(rows=len(records) + 1, cols=6)
 
-    table = doc.add_table(rows=len(records), cols=5)
-    cell = table.cell(0, 0)
-    cell.text = "Zelle 1"
+    headers = ["#", "Belegdatum", "Buchungstext", "Betrag", "Soll-Konto", "Haben-Konto"]
+    for col, header in enumerate(headers):
+        table.cell(0, col).text = header
+
+    for row, record in enumerate(records, start=1):
+        cells = table.rows[row].cells
+        cells[0].text = str(record.number)
+        cells[1].text = str(record.date.strftime("%d.%m.%Y"))
+        cells[2].text = str(record.description)
+        cells[3].text = str(record.amount).replace(".", ",")
+        cells[4].text = str(record.debit_account)
+        cells[5].text = str(record.credit_account)
 
 
-def _print():
-    doc_path = os.path.join(os.getcwd(), "dokument.docx")
+def _save(doc: Document, file_name: str):
+    doc.save(file_name + ".docx")
+
+    doc_path = os.path.abspath(file_name + ".docx")
+    pdf_path = os.path.abspath(file_name + ".pdf")
+
     word = client.Dispatch("Word.Application")
     doc = word.Documents.Open(doc_path)
-    doc.SaveAs(doc_path + ".pdf", FileFormat=17)  # FileFormat=17 is for PDF
+    doc.SaveAs(pdf_path, FileFormat=17)
     doc.Close()
     word.Quit()
 
 
 def _create_daybook_report(daybook):
-    pass
+    doc = Document()
+    _add_heading(doc, "Tagebuch")
+    _add_records_table(doc, daybook.records)
+    _save(doc, "Tagebuch")
 
 
 def _create_donors_report(donors):
