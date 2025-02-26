@@ -36,10 +36,12 @@ def _add_records_table(doc: Document, records: [Record]):
 
 
 def _save(doc: Document, file_name: str):
-    doc.save(file_name + ".docx")
 
-    doc_path = os.path.abspath(file_name + ".docx")
-    pdf_path = os.path.abspath(file_name + ".pdf")
+    parent_path = "../reports/"
+    doc.save(parent_path + file_name + ".docx")
+
+    doc_path = os.path.abspath(parent_path + file_name + ".docx")
+    pdf_path = os.path.abspath(parent_path + file_name + ".pdf")
 
     word = client.Dispatch("Word.Application")
     doc = word.Documents.Open(doc_path)
