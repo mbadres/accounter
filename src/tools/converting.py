@@ -10,7 +10,6 @@ from models.record import Record
 
 def _create_record(template: str, date: datetime, amount: str, name: str) -> Record:
     map = templates[template]
-
     return Record(
         date=date,
         description=map["description"].replace(placeholder, str(name)),
@@ -67,7 +66,7 @@ def _shrink(data: DataFrame) -> DataFrame:
     ]
 
 
-def _map(row: Series) -> Record:
+def _map(row: Series, corrections: [str, str]) -> Record:
 
     template = no_template
     for mapping in mappings:
@@ -86,16 +85,23 @@ def _map(row: Series) -> Record:
             template = mapping["Buchungsvorlage"]
             break
 
+    # correct the names
+    name = row["Name Zahlungsbeteiligter"]
+    if row["Name Zahlungsbeteiligter"] in corrections:
+        name = corrections[row["Name Zahlungsbeteiligter"]]
+
     return _create_record(
         template=template,
         date=row[date_tag],
         amount=row["Betrag"],
-        name=row["Name Zahlungsbeteiligter"],
+        name=name,
     )
 
 
 def convert(
-    activities_books: list[DataFrame], cash_books: list[DataFrame]
+    activities_books: list[DataFrame],
+    cash_books: list[DataFrame],
+    corrections: [str, str],
 ) -> list[Record]:
     records = list(_begin(activities_books))
 
@@ -103,7 +109,7 @@ def convert(
     data = concat(activities_books, ignore_index=True).sort_values(date_tag)
 
     for _, row in data.iterrows():
-        record = _map(row)
+        record = _map(row, corrections)
         records.append(record)
 
     return records

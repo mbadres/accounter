@@ -7,10 +7,16 @@ from models.report import Report
 
 
 def analyze(records: [Record]):
+    year = records[0].date.year
     daybook = Daybook()
     donors: [str, Donor] = {}
 
     for record in records:
+
+        if record.date.year != year:
+            print(record)
+            print(year)
+            raise ValueError("ERROR: Record does not belong to finance year.")
 
         # Add the record to the daybook.
         daybook.add(record)
@@ -46,4 +52,4 @@ def analyze(records: [Record]):
             donors[record.description].records.append(record)
 
     # Create a budget plan.
-    return Report(accounts, daybook, donors)
+    return Report(year, accounts, daybook, donors)
