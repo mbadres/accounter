@@ -9,7 +9,6 @@ def load():
     # settings[key] = value
 
     # accounts = json.load(open("data/accounts.json", "r"))
-    # addresses = json.load(open("data/addresses.json", "r"))
     # classes = json.load(open("data/classes.json", "r"))
     corrections = json.load(open("data/corrections.json", "r"))
     donations_in_kind = json.load(open("data/donations_in_kind.json", "r"))
